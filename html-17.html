@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <div id="even1">even one</div>
+    <div id="even2"></div>
+    <p id="date">date goes to</p>
+    <button onclick="showDate()">show date</button>
+
+
+    <button onload="document.getElementById('even1').innerHTML='Hello'">Click ME</button>
+     <button onclick="Sum()">Click for even2</button>
+    <script>
+        //array
+        var cars=["BMW","TOYATA","MITSHUBISHI"];
+        document.getElementById("demo").innerHTML=cars[2];
+
+        //object
+        var person={
+            firstName:"Tania",
+            lastName:"Akter",
+            subject:"CSE",
+            Department:"Computer",
+            name:function(){
+                return this.firstName + " " + this.lastName;
+            }
+  };
+  document.getElementById("demo2").innerHTML=person.subject;
+  document.getElementById("demo3").innerHTML=person.name();
+
+  //even
+  function Sum()
+  {
+    var x=10;
+    var y=20;
+    var z=x+y;
+   document.getElementById("even2").innerHTML=z;
+  }
+
+  //date
+ // document.getElementById("date").innerHTML=new Date();
+ 
+ 
+  function showDate()
+  {
+    document.getElementById("date").innerHTML=new Date();
+  }
+
+    </script>
+</body>
+</html>
